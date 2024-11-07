@@ -13,7 +13,7 @@ app.use(cors()); // Autorise toutes les origines
 app.use(express.json()); // Pour analyser les requêtes JSON
 
 // Connexion à MongoDB
-mongoose.connect('mongodb://localhost:27017/airbnb_project', {
+mongoose.connect('mongodb+srv://dbUser:oFDKyCIOFfeWn39y@my-airbnb.nczec.mongodb.net/', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
