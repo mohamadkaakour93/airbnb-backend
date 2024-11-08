@@ -7,12 +7,13 @@ const path = require('path');
 
 // Définir le port
 const port = process.env.PORT || 10000;
-app.listen(PORT, () => {
-    console.log(`Serveur démarré sur le port ${PORT}`);
-});
 
 // Middleware
 app.use(cors()); // Autorise toutes les origines
+app.use(cors({
+    origin: 'https://mohamadkaakour93.github.io/airbnb-project/' // Remplacez par l'URL de votre front-end
+}));
+
 app.use(express.json()); // Pour analyser les requêtes JSON
 
 // Connexion à MongoDB
