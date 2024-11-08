@@ -9,9 +9,10 @@ const path = require('path');
 const port = process.env.PORT || 10000;
 
 // Middleware
-app.use(cors()); // Autorise toutes les origines
 app.use(cors({
-    origin: 'https://mohamadkaakour93.github.io/airbnb-project/' // Remplacez par l'URL de votre front-end
+    origin: 'https://mohamadkaakour93.github.io/airbnb-project/',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
 app.use(express.json()); // Pour analyser les requêtes JSON
