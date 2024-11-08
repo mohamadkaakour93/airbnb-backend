@@ -6,7 +6,10 @@ const path = require('path');
 
 
 // Définir le port
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 10000;
+app.listen(PORT, () => {
+    console.log(`Serveur démarré sur le port ${PORT}`);
+});
 
 // Middleware
 app.use(cors()); // Autorise toutes les origines
